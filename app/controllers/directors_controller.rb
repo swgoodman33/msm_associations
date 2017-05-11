@@ -1,5 +1,5 @@
 class DirectorsController < ApplicationController
-  def index 
+  def index
     @directors = Director.all
 
     render("directors/index.html.erb")
@@ -7,6 +7,7 @@ class DirectorsController < ApplicationController
 
   def show
     @director = Director.find(params[:id])
+    @movie = Movie.new
 
     render("directors/show.html.erb")
   end
