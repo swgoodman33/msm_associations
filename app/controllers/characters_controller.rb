@@ -1,7 +1,7 @@
 class CharactersController < ApplicationController
   def index
     @characters = Character.all
-
+ 
     render("characters/index.html.erb")
   end
 
